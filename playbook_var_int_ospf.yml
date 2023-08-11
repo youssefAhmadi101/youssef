@@ -1,5 +1,5 @@
 ---
-- name: configuration OSPF&Int
+- name: configuration min
   hosts: nokia_sr_PE
 
 
