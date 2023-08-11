@@ -1,0 +1,25 @@
+---
+- name: configuration OSPF&Int
+  hosts: nokia_sr_PE
+
+
+  connection: local
+  gather_facts: no
+
+
+
+  vars_prompt:
+    - name: "ansible_user"
+      prompt: "Username ? "
+      private: no
+    - name: "ansible_ssh_pass"
+      prompt: "Password ? "
+      private: yes 
+
+
+
+  roles: 
+     - variables
+     - deploy-interf     
+     - deploy-ospf
+     - chek_conf
